@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind example</title>
+        <link rel="stylesheet" href="/style.css" />        
+    </head>
+
+    <body class="dark:bg-slate-900 dark:text-white p-4">
+        <div class="max-w-[1000px] w-full mx-auto relative">
+            <div id="top-menu"></div>
+            <div id="ddMenu"></div>
+            <div class="py-4">
+                <h1 class="text-3xl border-b-[10px] dark:border-purple-300 border-blue-300 pb-4">
+                    Calculator
+                </h1>
+                <div id="app" class="w-full dark:bg-purple-100 bg-blue-100 p-2"></div>                
+            </div>
+        </div>
+        <script src="./app.js"></script>
+        <script>
+            // custom config for the MTW app 
+            const mtwAppConfig = {
+                border: true // app border in the MTW page                    
+            }
+
+            ///////////////////////////////////////////////////////
+            // implement this functions in order to use private API        
+            const sendPrivateApiRequest = async () => {
+                // your code here:
+                // sendRequestToParent({ cat: 'getAssets' })
+            }        
+
+            const acceptPrivateApiResponse = async (data) => {
+                // process received data here:
+                // console.log(data)
+            }
+
+            // use this in order to send on document load
+            document.addEventListener('DOMContentLoaded', () => {
+                // your code here:
+                //sendRequestToParent({ method: 'getAssets' })
+            })
+        </script>
+        <script src="https://morethanwallet.com/appstore/index.js"></script>
+    </body>
+</html>
