@@ -6,7 +6,7 @@ const sandwitch = document.querySelectorAll('svg') //Select all svg elements
 const html = document.documentElement //Select the html element
 
 // Change the page theme mode: dark or light
-const toggle = () => {
+const my_toggle = () => {
     html.classList.toggle('dark');
     updateThemeButton();
 }
@@ -29,9 +29,9 @@ const setView = (v) => {
 // Open and hide dropdown menu (original given function that uses constant svg)
 const toggleMenu = (hide) => {
     if (!hide) {
-        ddMenu.classList.toggle('hidden')
+        ddMenu.classList.my_toggle('hidden')
         document.querySelectorAll('svg').forEach((el) => {
-            el.classList.toggle('hidden')
+            el.classList.my_toggle('hidden')
         })
     } else {
         ddMenu.classList.add('hidden')
@@ -192,7 +192,7 @@ const renderThemeToggle = () => {
     const themeButton = document.createElement('button');
     
     themeButton.id = 'theme-button';
-    themeButton.addEventListener('click', toggle);
+    themeButton.addEventListener('click', my_toggle);
 
     themeToggleContainer.appendChild(themeButton);
     menuContainer.appendChild(themeToggleContainer);
